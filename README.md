@@ -5,8 +5,8 @@ This plugin is based on [objc-dependency-visualizer](https://github.com/PaulTayk
 ![Example](KSHObjcUML.png)
 
 ## Usage
-Step 1 - Build your Xcode project
-Step 2 - Select Product->Objc-UML
+###Step 1 - Build your Xcode project
+###Step 2 - Select Product->Objc-UML
 ![Screenshot](ScreenShot.png)
 
 
