@@ -1,0 +1,331 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		98636A0C1A947A2200476837 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98636A0B1A947A2200476837 /* AppKit.framework */; };
+		98636A0E1A947A2200476837 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98636A0D1A947A2200476837 /* Foundation.framework */; };
+		98636A131A947A2200476837 /* KSHObjcUML.xcscheme in Resources */ = {isa = PBXBuildFile; fileRef = 98636A121A947A2200476837 /* KSHObjcUML.xcscheme */; };
+		98636A161A947A2200476837 /* KSHObjcUML.m in Sources */ = {isa = PBXBuildFile; fileRef = 98636A151A947A2200476837 /* KSHObjcUML.m */; };
+		98636A2B1A947A5300476837 /* VWKDocumentationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 98636A201A947A5300476837 /* VWKDocumentationManager.m */; };
+		98636A2C1A947A5300476837 /* VWKProject.m in Sources */ = {isa = PBXBuildFile; fileRef = 98636A221A947A5300476837 /* VWKProject.m */; };
+		98636A2D1A947A5300476837 /* VWKRunOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 98636A241A947A5300476837 /* VWKRunOperation.m */; };
+		98636A2E1A947A5300476837 /* VWKShellHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 98636A261A947A5300476837 /* VWKShellHandler.m */; };
+		98636A2F1A947A5300476837 /* VWKWorkspaceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 98636A281A947A5300476837 /* VWKWorkspaceManager.m */; };
+		98636A301A947A5300476837 /* VWKXCodeConsole.m in Sources */ = {isa = PBXBuildFile; fileRef = 98636A2A1A947A5300476837 /* VWKXCodeConsole.m */; };
+		9884344E1A947C2F00A99A61 /* ObjcUML.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9884344D1A947C2F00A99A61 /* ObjcUML.zip */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		98636A081A947A2200476837 /* KSHObjcUML.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KSHObjcUML.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		98636A0B1A947A2200476837 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		98636A0D1A947A2200476837 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		98636A111A947A2200476837 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98636A121A947A2200476837 /* KSHObjcUML.xcscheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = KSHObjcUML.xcscheme; path = KSHObjcUML.xcodeproj/xcshareddata/xcschemes/KSHObjcUML.xcscheme; sourceTree = SOURCE_ROOT; };
+		98636A141A947A2200476837 /* KSHObjcUML.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSHObjcUML.h; sourceTree = "<group>"; };
+		98636A151A947A2200476837 /* KSHObjcUML.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSHObjcUML.m; sourceTree = "<group>"; };
+		98636A1F1A947A5300476837 /* VWKDocumentationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWKDocumentationManager.h; sourceTree = "<group>"; };
+		98636A201A947A5300476837 /* VWKDocumentationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWKDocumentationManager.m; sourceTree = "<group>"; };
+		98636A211A947A5300476837 /* VWKProject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWKProject.h; sourceTree = "<group>"; };
+		98636A221A947A5300476837 /* VWKProject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWKProject.m; sourceTree = "<group>"; };
+		98636A231A947A5300476837 /* VWKRunOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWKRunOperation.h; sourceTree = "<group>"; };
+		98636A241A947A5300476837 /* VWKRunOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWKRunOperation.m; sourceTree = "<group>"; };
+		98636A251A947A5300476837 /* VWKShellHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWKShellHandler.h; sourceTree = "<group>"; };
+		98636A261A947A5300476837 /* VWKShellHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWKShellHandler.m; sourceTree = "<group>"; };
+		98636A271A947A5300476837 /* VWKWorkspaceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWKWorkspaceManager.h; sourceTree = "<group>"; };
+		98636A281A947A5300476837 /* VWKWorkspaceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWKWorkspaceManager.m; sourceTree = "<group>"; };
+		98636A291A947A5300476837 /* VWKXCodeConsole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWKXCodeConsole.h; sourceTree = "<group>"; };
+		98636A2A1A947A5300476837 /* VWKXCodeConsole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWKXCodeConsole.m; sourceTree = "<group>"; };
+		98636A311A947AED00476837 /* KSHObjcUMLPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSHObjcUMLPrefixHeader.pch; sourceTree = "<group>"; };
+		9884344D1A947C2F00A99A61 /* ObjcUML.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = ObjcUML.zip; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		98636A061A947A2200476837 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98636A0C1A947A2200476837 /* AppKit.framework in Frameworks */,
+				98636A0E1A947A2200476837 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		986369FF1A947A2200476837 = {
+			isa = PBXGroup;
+			children = (
+				98636A0F1A947A2200476837 /* KSHObjcUML */,
+				98636A0A1A947A2200476837 /* Frameworks */,
+				98636A091A947A2200476837 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		98636A091A947A2200476837 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				98636A081A947A2200476837 /* KSHObjcUML.xcplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		98636A0A1A947A2200476837 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				98636A0B1A947A2200476837 /* AppKit.framework */,
+				98636A0D1A947A2200476837 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		98636A0F1A947A2200476837 /* KSHObjcUML */ = {
+			isa = PBXGroup;
+			children = (
+				98636A1E1A947A5300476837 /* Helpers */,
+				98636A141A947A2200476837 /* KSHObjcUML.h */,
+				98636A151A947A2200476837 /* KSHObjcUML.m */,
+				98636A101A947A2200476837 /* Supporting Files */,
+			);
+			path = KSHObjcUML;
+			sourceTree = "<group>";
+		};
+		98636A101A947A2200476837 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9884344D1A947C2F00A99A61 /* ObjcUML.zip */,
+				98636A111A947A2200476837 /* Info.plist */,
+				98636A121A947A2200476837 /* KSHObjcUML.xcscheme */,
+				98636A311A947AED00476837 /* KSHObjcUMLPrefixHeader.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		98636A1E1A947A5300476837 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				98636A1F1A947A5300476837 /* VWKDocumentationManager.h */,
+				98636A201A947A5300476837 /* VWKDocumentationManager.m */,
+				98636A211A947A5300476837 /* VWKProject.h */,
+				98636A221A947A5300476837 /* VWKProject.m */,
+				98636A231A947A5300476837 /* VWKRunOperation.h */,
+				98636A241A947A5300476837 /* VWKRunOperation.m */,
+				98636A251A947A5300476837 /* VWKShellHandler.h */,
+				98636A261A947A5300476837 /* VWKShellHandler.m */,
+				98636A271A947A5300476837 /* VWKWorkspaceManager.h */,
+				98636A281A947A5300476837 /* VWKWorkspaceManager.m */,
+				98636A291A947A5300476837 /* VWKXCodeConsole.h */,
+				98636A2A1A947A5300476837 /* VWKXCodeConsole.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		98636A071A947A2200476837 /* KSHObjcUML */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 98636A191A947A2200476837 /* Build configuration list for PBXNativeTarget "KSHObjcUML" */;
+			buildPhases = (
+				98636A041A947A2200476837 /* Sources */,
+				98636A051A947A2200476837 /* Resources */,
+				98636A061A947A2200476837 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KSHObjcUML;
+			productName = KSHObjcUML;
+			productReference = 98636A081A947A2200476837 /* KSHObjcUML.xcplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		98636A001A947A2200476837 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = KimSungwhee;
+				TargetAttributes = {
+					98636A071A947A2200476837 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 98636A031A947A2200476837 /* Build configuration list for PBXProject "KSHObjcUML" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 986369FF1A947A2200476837;
+			productRefGroup = 98636A091A947A2200476837 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				98636A071A947A2200476837 /* KSHObjcUML */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		98636A051A947A2200476837 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9884344E1A947C2F00A99A61 /* ObjcUML.zip in Resources */,
+				98636A131A947A2200476837 /* KSHObjcUML.xcscheme in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		98636A041A947A2200476837 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98636A161A947A2200476837 /* KSHObjcUML.m in Sources */,
+				98636A2C1A947A5300476837 /* VWKProject.m in Sources */,
+				98636A2F1A947A5300476837 /* VWKWorkspaceManager.m in Sources */,
+				98636A2D1A947A5300476837 /* VWKRunOperation.m in Sources */,
+				98636A2E1A947A5300476837 /* VWKShellHandler.m in Sources */,
+				98636A2B1A947A5300476837 /* VWKDocumentationManager.m in Sources */,
+				98636A301A947A5300476837 /* VWKXCodeConsole.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		98636A171A947A2200476837 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+			};
+			name = Debug;
+		};
+		98636A181A947A2200476837 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+			};
+			name = Release;
+		};
+		98636A1A1A947A2200476837 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				GCC_PREFIX_HEADER = KSHObjcUML/KSHObjcUMLPrefixHeader.pch;
+				INFOPLIST_FILE = KSHObjcUML/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Debug;
+		};
+		98636A1B1A947A2200476837 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				GCC_PREFIX_HEADER = KSHObjcUML/KSHObjcUMLPrefixHeader.pch;
+				INFOPLIST_FILE = KSHObjcUML/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		98636A031A947A2200476837 /* Build configuration list for PBXProject "KSHObjcUML" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98636A171A947A2200476837 /* Debug */,
+				98636A181A947A2200476837 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		98636A191A947A2200476837 /* Build configuration list for PBXNativeTarget "KSHObjcUML" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98636A1A1A947A2200476837 /* Debug */,
+				98636A1B1A947A2200476837 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 98636A001A947A2200476837 /* Project object */;
+}

@@ -1,0 +1,18 @@
+//
+//  KSHObjcUMLPrefixHeader.pch
+//  KSHObjcUML
+//
+//  Created by 金聖輝 on 15-2-18.
+//  Copyright (c) 2015年 KimSungwhee. All rights reserved.
+//
+
+#ifndef KSHObjcUML_KSHObjcUMLPrefixHeader_pch
+#define KSHObjcUML_KSHObjcUMLPrefixHeader_pch
+
+#ifdef __OBJC__
+#import <Foundation/Foundation.h>
+
+#import "VWKXCodeConsole.h"
+#endif
+
+#endif
