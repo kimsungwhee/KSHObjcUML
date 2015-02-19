@@ -46,12 +46,7 @@ static NSString *OUT_PUT_JS_FILE        = @"origin.js";
 
 - (NSString *)scriptPath
 {
-    if( !_scriptPath )
-    {
-        _scriptPath = [[self.directoryPath stringByAppendingPathComponent:FOLDAR_NAME] stringByAppendingPathComponent:@"script.rb"];
-    }
-    
-    return _scriptPath;
+    return [[self.directoryPath stringByAppendingPathComponent:FOLDAR_NAME] stringByAppendingPathComponent:@"script.rb"];
 }
 
 - (NSString *)projectName
@@ -61,12 +56,7 @@ static NSString *OUT_PUT_JS_FILE        = @"origin.js";
 
 - (NSString *)zipFilePath
 {
-    if( !_zipFilePath )
-    {
-        _zipFilePath = [[KSHObjcUML pluginBundle] pathForResource:FOLDAR_NAME ofType:@"zip"];
-    }
-    
-    return _zipFilePath;
+    return [[KSHObjcUML pluginBundle] pathForResource:FOLDAR_NAME ofType:@"zip"];
 }
 
 - (NSString *)directoryPath

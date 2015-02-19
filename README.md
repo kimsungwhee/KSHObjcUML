@@ -1,5 +1,5 @@
 ## KSHObjcUML
-KSHObjcUML can show oriented graph of dependencies between classes in your project.
+KSHObjcUML can show oriented graph of dependencies between Objective-C classes in your project.
 This plugin is based on [objc-dependency-visualizer](https://github.com/PaulTaykalo/objc-dependency-visualizer).
 
 ![Example](KSHObjcUML.png)
@@ -28,6 +28,7 @@ Run `rm -r ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins/KSHObj
 
 ## Thanks
 Thanks to kattrali.[cocoapods-xcode-plugin](https://github.com/kattrali/cocoapods-xcode-plugin).
+Thanks to Paul Taykalo.[objc-dependency-visualizer](https://github.com/PaulTaykalo/objc-dependency-visualizer).
 
 ## License
 
