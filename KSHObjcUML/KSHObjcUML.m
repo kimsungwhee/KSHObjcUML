@@ -116,7 +116,7 @@ static NSString *OUT_PUT_JS_FILE        = @"origin.js";
                                {
                                    [VWKShellHandler runShellCommand:[BIN_PATH stringByAppendingPathComponent:RM_EXECUTABLE] withArgs:@[@"-rf", [self.directoryPath stringByAppendingPathComponent:ZIP_FILE_NAME]] directory:self.directoryPath completion:^(
                                                                                                                                                                                                                                                             NSTask *t, NSString *standardOutputString, NSString *standardErrorString) {
-                                       [VWKShellHandler runShellCommand:self.scriptPath withArgs:@[@"-s", self.projectName, @"-t",
+                                       [VWKShellHandler runShellCommand:self.scriptPath withArgs:@[@"-s",[NSString stringWithFormat:@"\"%@\"",self.projectName], @"-t",
                                                                                                    [[self.directoryPath stringByAppendingPathComponent:FOLDAR_NAME] stringByAppendingPathComponent:OUT_PUT_JS_FILE]] directory:
                                         self.directoryPath   completion:^(NSTask *t, NSString *standardOutputString, NSString *standardErrorString) {
                                             [VWKShellHandler runShellCommand:[BIN_PATH stringByAppendingPathComponent:RM_EXECUTABLE] withArgs:@[@"-rf", self.scriptPath] directory:self.directoryPath completion:^(NSTask *t, NSString *standardOutputString,
