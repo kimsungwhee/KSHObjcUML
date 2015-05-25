@@ -7,15 +7,8 @@ This plugin is based on [objc-dependency-visualizer](https://github.com/PaulTayk
 ##Changes
 
 
-### 2015-03-10
- - Support for Xcode 6.2
-
-### 2015-02-23
- - bug fixed: When a project containing cocoapods projects are sometimes not export properly
-
-### 2015-02-21
- - bug fixed of project name have whitespace
- - set default show dependencies classes name 
+### 2015-05-25
+ - Resolving Dependecies from DWARF information
 
 ## Usage
 ###Step 1 - Build your Xcode project
