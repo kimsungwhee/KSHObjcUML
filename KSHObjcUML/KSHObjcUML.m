@@ -86,15 +86,16 @@ static NSString *OUT_PUT_JS_FILE        = @"origin.js";
     if( self = [super init] )
     {
         self.bundle = plugin;
-        
-        NSMenuItem *menuItem = [[NSApp mainMenu] itemWithTitle:@"Product"];
-        if( menuItem )
-        {
-            [[menuItem submenu] addItem:[NSMenuItem separatorItem]];
-            NSMenuItem *actionMenuItem = [[NSMenuItem alloc] initWithTitle:@"Objc-UML" action:@selector(startGenerateGraph) keyEquivalent:@""];
-            [actionMenuItem setTarget:self];
-            [[menuItem submenu] insertItem:actionMenuItem atIndex:[menuItem.submenu indexOfItemWithTitle:@"Build For"]];
-        }
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            NSMenuItem *menuItem = [[NSApp mainMenu] itemWithTitle:@"Product"];
+            if( menuItem )
+            {
+                [[menuItem submenu] addItem:[NSMenuItem separatorItem]];
+                NSMenuItem *actionMenuItem = [[NSMenuItem alloc] initWithTitle:@"Objc-UML" action:@selector(startGenerateGraph) keyEquivalent:@""];
+                [actionMenuItem setTarget:self];
+                [[menuItem submenu] insertItem:actionMenuItem atIndex:[menuItem.submenu indexOfItemWithTitle:@"Build For"]];
+            }
+        }];
     }
     
     return self;
