@@ -46,22 +46,38 @@ static NSString *OUT_PUT_JS_FILE        = @"origin.js";
 
 - (NSString *)scriptPath
 {
-    return [[self.directoryPath stringByAppendingPathComponent:FOLDAR_NAME] stringByAppendingPathComponent:@"script.rb"];
+    NSString *tempScriptPath = [[self.directoryPath stringByAppendingPathComponent:FOLDAR_NAME] stringByAppendingPathComponent:@"script.rb"];
+    if (tempScriptPath) {
+        _scriptPath = tempScriptPath;
+    }
+    return _scriptPath;
 }
 
 - (NSString *)projectName
 {
-    return [VWKProject projectForKeyWindow].projectOriginalName;
+    NSString *tempProjectName = [VWKProject projectForKeyWindow].projectOriginalName;
+    if (tempProjectName) {
+        _projectName = tempProjectName;
+    }
+    return _projectName;
 }
 
 - (NSString *)zipFilePath
 {
-    return [[KSHObjcUML pluginBundle] pathForResource:FOLDAR_NAME ofType:@"zip"];
+    NSString *tempZipFilePath = [[KSHObjcUML pluginBundle] pathForResource:FOLDAR_NAME ofType:@"zip"];
+    if (tempZipFilePath) {
+        _zipFilePath = tempZipFilePath;
+    }
+    return _zipFilePath;
 }
 
 - (NSString *)directoryPath
 {
-    return [VWKProject projectForKeyWindow].directoryPath;
+    NSString *tempDirectoryPath = [VWKProject projectForKeyWindow].directoryPath;
+    if (tempDirectoryPath) {
+        _directoryPath = tempDirectoryPath;
+    }
+    return _directoryPath;
 }
 
 + (void)pluginDidLoad:(NSBundle *)plugin
