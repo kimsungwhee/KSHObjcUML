@@ -11,7 +11,7 @@ This plugin is based on [objc-dependency-visualizer](https://github.com/PaulTayk
  - Resolving Dependecies from DWARF information
 
 ## Usage
-###Step 1 - Build your Xcode project
+###Step 1 - Build your Xcode project（Simulator）
 ###Step 2 - Select Product->Objc-UML
 ![Screenshot](ScreenShot.png)
 
