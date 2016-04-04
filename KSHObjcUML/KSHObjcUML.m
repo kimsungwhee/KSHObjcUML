@@ -107,9 +107,12 @@ static NSString *OUT_PUT_JS_FILE        = @"origin.js";
             if( menuItem )
             {
                 [[menuItem submenu] addItem:[NSMenuItem separatorItem]];
-                NSMenuItem *actionMenuItem = [[NSMenuItem alloc] initWithTitle:@"Objc-UML" action:@selector(startGenerateGraph) keyEquivalent:@""];
-                [actionMenuItem setTarget:self];
-                [[menuItem submenu] insertItem:actionMenuItem atIndex:[menuItem.submenu indexOfItemWithTitle:@"Build For"]];
+                NSMenuItem *objcActionMenuItem = [[NSMenuItem alloc] initWithTitle:@"Objc-UML" action:@selector(startGenerateObjcGraph) keyEquivalent:@""];
+                [objcActionMenuItem setTarget:self];
+                [[menuItem submenu] insertItem:objcActionMenuItem atIndex:[menuItem.submenu indexOfItemWithTitle:@"Build For"]];
+                NSMenuItem *swiftActionMenuItem = [[NSMenuItem alloc] initWithTitle:@"Swift-UML" action:@selector(startGenerateSwiftGraph) keyEquivalent:@""];
+                [swiftActionMenuItem setTarget:self];
+                [[menuItem submenu] insertItem:swiftActionMenuItem atIndex:[menuItem.submenu indexOfItemWithTitle:@"Build For"]];
             }
         }];
     }
@@ -117,7 +120,17 @@ static NSString *OUT_PUT_JS_FILE        = @"origin.js";
     return self;
 }
 
-- (void)startGenerateGraph
+- (void)startGenerateObjcGraph
+{
+    [self startGenerateGraph:@"-d"];
+}
+
+- (void)startGenerateSwiftGraph
+{
+    [self startGenerateGraph:@"-w"];
+}
+
+- (void)startGenerateGraph:(NSString*)generateType
 {
     [VWKShellHandler runShellCommand:[BIN_PATH stringByAppendingPathComponent:COPY_EXECUTABLE]
                             withArgs:@[self.zipFilePath, self.directoryPath]
@@ -133,13 +146,22 @@ static NSString *OUT_PUT_JS_FILE        = @"origin.js";
                                {
                                    [VWKShellHandler runShellCommand:[BIN_PATH stringByAppendingPathComponent:RM_EXECUTABLE] withArgs:@[@"-rf", [self.directoryPath stringByAppendingPathComponent:ZIP_FILE_NAME]] directory:self.directoryPath completion:^(
                                                                                                                                                                                                                                                             NSTask *t, NSString *standardOutputString, NSString *standardErrorString) {
-                                       [VWKShellHandler runShellCommand:self.scriptPath withArgs:@[@"-s",[NSString stringWithFormat:@"\"%@\"",self.projectName], @"-t",
+                                       [VWKShellHandler runShellCommand:self.scriptPath withArgs:@[@"-f",@"json-var",generateType,@"-s",[NSString stringWithFormat:@"\"%@\"",self.projectName], @"-t",
                                                                                                    [[self.directoryPath stringByAppendingPathComponent:FOLDAR_NAME] stringByAppendingPathComponent:OUT_PUT_JS_FILE]] directory:
                                         self.directoryPath   completion:^(NSTask *t, NSString *standardOutputString, NSString *standardErrorString) {
-                                            [VWKShellHandler runShellCommand:[BIN_PATH stringByAppendingPathComponent:RM_EXECUTABLE] withArgs:@[@"-rf", self.scriptPath] directory:self.directoryPath completion:^(NSTask *t, NSString *standardOutputString,
-                                                                                                                                                                                                                   NSString *standardErrorString) {
-                                                [VWKShellHandler runShellCommand:[USER_BIN_PATH stringByAppendingPathComponent:OPEN_EXECUTABLE] withArgs:@[[[self.directoryPath stringByAppendingPathComponent:FOLDAR_NAME] stringByAppendingPathComponent:
-                                                                                                                                                            HTML_FILE]] directory:self.directoryPath completion:nil];
+                                            [VWKShellHandler runShellCommand:[BIN_PATH stringByAppendingPathComponent:RM_EXECUTABLE] withArgs:@[@"-rf", [[self.directoryPath stringByAppendingPathComponent:FOLDAR_NAME] stringByAppendingPathComponent:@"script.rb"]] directory:self.directoryPath completion:^(NSTask *t, NSString *standardOutputString,NSString *standardErrorString) {
+                                                [VWKShellHandler runShellCommand:[BIN_PATH stringByAppendingPathComponent:RM_EXECUTABLE] withArgs:@[@"-rf", [[self.directoryPath stringByAppendingPathComponent:FOLDAR_NAME] stringByAppendingPathComponent:@"generate-objc-dependencies-to-json.rb"]] directory:self.directoryPath completion:^(NSTask *t, NSString *standardOutputString,NSString *standardErrorString) {
+                                                    [VWKShellHandler runShellCommand:[BIN_PATH stringByAppendingPathComponent:RM_EXECUTABLE] withArgs:@[@"-rf", [[self.directoryPath stringByAppendingPathComponent:FOLDAR_NAME] stringByAppendingPathComponent:@"objc_dependencies_generator.rb"]] directory:self.directoryPath completion:^(NSTask *t, NSString *standardOutputString,NSString *standardErrorString) {
+                                                        [VWKShellHandler runShellCommand:[BIN_PATH stringByAppendingPathComponent:RM_EXECUTABLE] withArgs:@[@"-rf", [[self.directoryPath stringByAppendingPathComponent:FOLDAR_NAME] stringByAppendingPathComponent:@"objc_dependency_tree_generator_helper.rb"]] directory:self.directoryPath completion:^(NSTask *t, NSString *standardOutputString,NSString *standardErrorString) {
+                                                            [VWKShellHandler runShellCommand:[BIN_PATH stringByAppendingPathComponent:RM_EXECUTABLE] withArgs:@[@"-rf", [[self.directoryPath stringByAppendingPathComponent:FOLDAR_NAME] stringByAppendingPathComponent:@"objc_dependency_tree_generator.rb"]] directory:self.directoryPath completion:^(NSTask *t, NSString *standardOutputString,NSString *standardErrorString) {
+                                                                [VWKShellHandler runShellCommand:[BIN_PATH stringByAppendingPathComponent:RM_EXECUTABLE] withArgs:@[@"-rf", [[self.directoryPath stringByAppendingPathComponent:FOLDAR_NAME] stringByAppendingPathComponent:@"swift_dependencies_generator.rb"]] directory:self.directoryPath completion:^(NSTask *t, NSString *standardOutputString,NSString *standardErrorString) {
+                                                                    [VWKShellHandler runShellCommand:[USER_BIN_PATH stringByAppendingPathComponent:OPEN_EXECUTABLE] withArgs:@[[[self.directoryPath stringByAppendingPathComponent:FOLDAR_NAME] stringByAppendingPathComponent:
+                                                                                                                                                                                HTML_FILE]] directory:self.directoryPath completion:nil];
+                                                                }];
+                                                            }];
+                                                        }];
+                                                    }];
+                                                }];
                                             }];
                                         }];
                                    }];
