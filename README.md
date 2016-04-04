@@ -1,10 +1,13 @@
 ## KSHObjcUML
-KSHObjcUML can show oriented graph of dependencies between Objective-C classes in your project.
+KSHObjcUML can show oriented graph of dependencies between Objective-C and Swift classes in your project.
 This plugin is based on [objc-dependency-visualizer](https://github.com/PaulTaykalo/objc-dependency-visualizer).
 
 ![Example](KSHObjcUML.png)
 
 ##Changes
+
+### 2016-04-24
+ - Support Swift Project
 
 
 ### 2015-05-25
@@ -12,7 +15,7 @@ This plugin is based on [objc-dependency-visualizer](https://github.com/PaulTayk
 
 ## Usage
 ###Step 1 - Build your Xcode project（Simulator）
-###Step 2 - Select Product->Objc-UML
+###Step 2 - Select Product->Objc-UML or Swift-UML
 ![Screenshot](ScreenShot.png)
 
 ## Install
