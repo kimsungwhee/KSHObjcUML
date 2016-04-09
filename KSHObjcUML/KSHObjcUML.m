@@ -57,7 +57,8 @@ static NSString *OUT_PUT_JS_FILE        = @"origin.js";
 {
     NSString *tempProjectName = [VWKProject projectForKeyWindow].projectOriginalName;
     if (tempProjectName) {
-        _projectName = tempProjectName;
+        // When the project name contains “ ” replace to "_"
+        _projectName = [tempProjectName stringByReplacingOccurrencesOfString:@" " withString:@"_"];
     }
     return _projectName;
 }
